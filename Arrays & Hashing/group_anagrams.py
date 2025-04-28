@@ -41,6 +41,9 @@ def group_anagrams2(strs:list[str]) -> list[list[str]]:
         anagrams[key] = anagrams.get(key, []) + [s]
     return list(anagrams.values())
 
+    # Time complexity: O(n * k), where n is the number of strings and k is the maximum length of a string
+    # Space complexity: O(n * k), where n is the number of strings and k is the maximum length of a string
+
 def main():
     """
     Test the group_anagrams function with some sample input.
