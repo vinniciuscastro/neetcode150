@@ -49,12 +49,15 @@ def main():
     strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
     
     # Call the group_anagrams function and print the result
-    print("------------------------------------------------\n")
+    print("-" * 50 + "\n")
+    print(f"Original List: \n{strs}\n")
     print("Group Anagrams using sorting method:")
     print(group_anagrams1(strs))
-    print("\n------------------------------------------------\n")
+    print("\n--------------------------------------------------\n")
+    print(f"Original List: \n{strs}\n")
     print("Group Anagrams using character count method:")
     print(group_anagrams2(strs))
+    print("\n--------------------------------------------------\n")
 
 if __name__ == "__main__":  
     main()
