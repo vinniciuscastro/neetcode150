@@ -49,3 +49,4 @@ def is_valid(s: str) -> bool:
             stack.append(char)  # Add open brackets to the stack
     
     return not stack  # Return True if all brackets are matched, False otherwise
+
