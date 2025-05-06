@@ -25,6 +25,9 @@ def isPalindrome1(s: str) -> bool:
         right -= 1
 
     return True
+    
+    # time complexity: O(n), where n is the length of the string
+    # space complexity: O(1), since we are using only a constant amount of space for the pointers
 
 def isPalindrome2(s: str) -> bool:
     """
@@ -45,6 +48,8 @@ def isPalindrome2(s: str) -> bool:
     # Return True if the new string is equal to its reverse
     return new_string == new_string[::-1]
 
+    # time complexity: O(n), where n is the length of the string
+    # space complexity: O(n), since we are creating a new string with the filtered characters
 import re
 def isPalindrome3(s: str) -> bool:
     """
@@ -57,6 +62,9 @@ def isPalindrome3(s: str) -> bool:
     s = re.sub(r'[^a-zA-Z0-9]', '', s).lower()
     # Return True if the string is equal to its reverse
     return s == s[::-1]
+
+    # time complexity: O(n), where n is the length of the string
+    # space complexity: O(n), since we are creating a new string with the filtered characters
 
 def main():
     s = "Was it a car or a cat I saw?"
