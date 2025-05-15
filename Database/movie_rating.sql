@@ -88,3 +88,38 @@
 -- Explanation: 
 -- Daniel and Monica have rated 3 movies ("Avengers", "Frozen 2" and "Joker") but Daniel is smaller lexicographically.
 -- Frozen 2 and Joker have a rating average of 3.5 in February but Frozen 2 is smaller lexicographically.
+
+
+-- # Write your MySQL query statement below
+(SELECT name AS results
+FROM MovieRating JOIN Users USING(user_id)
+GROUP BY name
+ORDER BY COUNT(*) DESC, name
+LIMIT 1)
+
+UNION ALL
+
+(SELECT title AS results
+FROM MovieRating JOIN Movies USING(movie_id)
+WHERE EXTRACT(YEAR_MONTH FROM created_at) = 202002
+GROUP BY title
+ORDER BY AVG(rating) DESC, title
+LIMIT 1);
+
+-- PostgreSQL 
+(SELECT name AS results
+FROM MovieRating
+JOIN Users USING(user_id)
+GROUP BY name
+ORDER BY COUNT(*) DESC, name
+LIMIT 1)
+
+UNION ALL
+
+(SELECT title AS results
+FROM MovieRating
+JOIN Movies USING(movie_id)
+WHERE to_char(created_at, 'YYYYMM') = '202002'
+GROUP BY title
+ORDER BY AVG(rating) DESC, title
+LIMIT 1);
