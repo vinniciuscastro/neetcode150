@@ -39,3 +39,6 @@ def searchBST(root: TreeNode, val: int) -> TreeNode:
         return searchBST(root.left, val)
 
     return root
+
+# Time complexity: O(h), where h is the height of the tree (in the worst case, it can be O(n) for a skewed tree)
+# Space complexity: O(h), where h is the height of the tree (due to recursion stack)
