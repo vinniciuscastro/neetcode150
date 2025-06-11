@@ -21,3 +21,21 @@ Definition for a binary tree node.
     #         return searchBST(root.left, val)
 
     #     return root
+
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def searchBST(root: TreeNode, val: int) -> TreeNode:
+    if root == None:
+        return root
+
+    if val > root.val:
+        return searchBST(root.right, val)
+    if val < root.val:
+        return searchBST(root.left, val)
+
+    return root
