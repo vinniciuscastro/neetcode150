@@ -1,0 +1,11 @@
+Trees are easier to understand if we understand linked lists
+
+Because they also have nodes 
+The tree start with the root and end in the leafs each node only has max of 2 nodes division. 
+
+Binary Trees 
+left side always need to be less than the Root
+
+
+Recursion is a good way to triverse trees 
+Recursion needs base case and a self-call 

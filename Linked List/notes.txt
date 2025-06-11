@@ -1,0 +1,1 @@
+Linked lists have nodes that connect the previous and the next
