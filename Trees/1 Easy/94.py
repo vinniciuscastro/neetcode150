@@ -17,3 +17,31 @@ def inorderTraversal(root: 'TreeNode') -> list[int]:
     
     # Traverse left subtree, visit root, then traverse right subtree
     return inorderTraversal(root.left) + [root.val] + inorderTraversal(root.right)
+
+# Time complexity: O(n), where n is the number of nodes in the tree
+# Space complexity: O(n), due to the recursion stack and the output list
+
+# Iterative approach using a stack
+def inorderTraversalIterative(root: 'TreeNode') -> list[int]:
+    """
+    Perform inorder traversal of a binary tree using an iterative approach with a stack.
+
+    :param root: Root node of the binary tree
+    :return: List of node values in inorder
+    """
+    result = []
+    stack = []
+    current = root
+
+    while current or stack:
+        while current:
+            stack.append(current)
+            current = current.left
+        current = stack.pop()
+        result.append(current.val)
+        current = current.right
+
+    return result
+
+# Time complexity: O(n), where n is the number of nodes in the tree
+# Space complexity: O(n), due to the stack used for storing nodes
