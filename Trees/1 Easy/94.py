@@ -4,6 +4,12 @@ LeetCode 94. Binary Tree Inorder Traversal
 Given the root of a binary tree, return the inorder traversal of its nodes' values.
 """
 class TreeNode:
+<<<<<<< HEAD
+    """
+    Definition for a binary tree node.
+    """
+=======
+>>>>>>> 1c3572891a4bda0378149ca54a4871318364cb5b
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
