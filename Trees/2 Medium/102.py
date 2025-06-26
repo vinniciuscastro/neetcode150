@@ -23,3 +23,16 @@ def levelOrder(root: TreeNode) -> list[list[int]]:
     if not root:
         return []
     res = []
+    queue = deque([root])  # Initialize the queue with the root node    
+    while queue:
+        level_size = len(queue)  # Number of nodes at the current level
+        level_nodes = []  # List to store values of nodes at the current level
+        for _ in range(level_size):
+            node = queue.popleft()  # Pop the first node from the queue
+            level_nodes.append(node.val)  # Add its value to the current level's list
+            if node.left:  # If left child exists, add it to the queue
+                queue.append(node.left)
+            if node.right:  # If right child exists, add it to the queue
+                queue.append(node.right)
+        res.append(level_nodes)  # Add the current level's list to the result
+    return res  # Return the list of lists containing level order traversal values
