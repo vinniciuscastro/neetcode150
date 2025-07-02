@@ -7,5 +7,12 @@ Binary Trees
 left side always need to be less than the Root
 
 
-Recursion is a good way to triverse trees 
+Recursion is a good way to traverse trees 
 Recursion needs base case and a self-call 
+
+
+DFS there are 3 ways to process a tree Inorder, Preorder, Postorder
+
+
+Inorder means to process the nodes from left to right like a binary search tree
+
