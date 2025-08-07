@@ -23,4 +23,7 @@ def isValidSudoku(board):
                 cols[j].add(num)
                 boxes[box_index].add(num)
     return True
-# Time complexity:
+
+
+# Time complexity: O(1), since the board size is fixed at 9x9
+# Space complexity: O(1), since we use a fixed number of sets
