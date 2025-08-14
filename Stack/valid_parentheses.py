@@ -122,3 +122,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# This code is designed to check if a string of parentheses is valid.
