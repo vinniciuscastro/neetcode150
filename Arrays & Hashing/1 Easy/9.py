@@ -21,6 +21,7 @@ def isPalindrome(x):
 def isPalindromeString(x):
     s = str(x)
     return s == s[::-1] 
+    
 # Time complexity: O(n), where n is the number of digits in x
 # Space complexity: O(n), due to the string conversion
 # Note: The string conversion method is less efficient for large integers compared to the reversing method.
